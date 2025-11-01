@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Palestine - Authentic Home-style Food</title>
+    <style>
+        /* CSS will be added later */
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Free Palestine</h1>
+                <p>Authentic Home-style Food</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Delicious Eastern Cuisine</h2>
+            <p>High Quality - Authentic Flavor - Fast Service</p>
+            <button class="cta-button" onclick="scrollToMenu()">Order Now</button>
+        </div>
+        <div class="hero-image">
+            <!-- Image will be added here -->
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Our Delicious Menu</h2>
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="main">Main Dishes</button>
+            <button class="category-btn" data-category="seafood">Seafood</button>
+            <button class="category-btn" data-category="pastries">Pastries & Desserts</button>
+            <button class="category-btn" data-category="appetizers">Appetizers & Salads</button>
+        </div>
+
+        <div class="menu-items">
+            <!-- Main Dishes -->
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="maklopa.jpg" alt="">
+                    <!-- Maqluba image -->
+                </div>
+                <div class="item-info">
+                    <h3>Maqluba</h3>
+                    <p>Rice with seasonal vegetables and lamb meat</p>
+                    <div class="item-price">45 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Maqluba', 45)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="hq720.jpg" alt="">
+
+                    <!-- Musakhan image -->
+                </div>
+                <div class="item-info">
+                    <h3>Musakhan</h3>
+                    <p>Chicken with onion, olive oil and taboon bread</p>
+                    <div class="item-price">40 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Musakhan', 40)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="pastries">
+                <div class="item-image">
+                    <img src="fatera thahbea.jpg" alt="">
+
+                    <!-- Golden Pie image -->
+                </div>
+                <div class="item-info">
+                    <h3>Golden Pie</h3>
+                    <p>Golden flaky dough with spiced meat filling</p>
+                    <div class="item-price">25 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Golden Pie', 25)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="kobba.jpg" alt="">
+
+                    <!-- Kibbeh image -->
+                </div>
+                <div class="item-info">
+                    <h3>Kibbeh</h3>
+                    <p>Bulgur with minced meat and onion-meat filling</p>
+                    <div class="item-price">35 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Kibbeh', 35)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="pastries">
+                <div class="item-image">
+                    <img src="kaek.jpg" alt="">
+
+                    <!-- Kaak image -->
+                </div>
+                <div class="item-info">
+                    <h3>Kaak</h3>
+                    <p>Traditional Arabic kaak with date or walnut filling</p>
+                    <div class="item-price">30 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Kaak', 30)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="pastries">
+                <div class="item-image">
+                    <img src="maamol.jpg" alt="">
+
+                    <!-- Maamoul image -->
+                </div>
+                <div class="item-info">
+                    <h3>Maamoul</h3>
+                    <p>Maamoul with dates or walnuts in olive oil</p>
+                    <div class="item-price">28 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Maamoul', 28)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="ssaa.jpg" alt="">
+
+                    <!-- Stuffed Grape Leaves image -->
+                </div>
+                <div class="item-info">
+                    <h3>Stuffed Grape Leaves</h3>
+                    <p>Grape leaves stuffed with rice and meat</p>
+                    <div class="item-price">38 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Stuffed Grape Leaves', 38)">Add to Order</button>
+                </div>
+            </div>
+
+
+
+            <div class="menu-item" data-category="seafood">
+                <div class="item-image">
+                    <img src="sama.jpg" alt="">
+
+                    <!-- Grilled Fish image -->
+                </div>
+                <div class="item-info">
+                    <h3>Grilled Fish</h3>
+                    <p>Fish grilled on charcoal with special spices</p>
+                    <div class="item-price">60 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Grilled Fish', 60)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="zaret.jpg" alt="">
+
+
+                    <!-- Chicken Pan with Thyme image -->
+                </div>
+                <div class="item-info">
+                    <h3>Chicken Pan with Thyme</h3>
+                    <p>Chicken with thyme, olive oil and potatoes</p>
+                    <div class="item-price">42 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Chicken Pan with Thyme', 42)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="dajaj mashwe.jpg" alt="">
+
+                    <!-- Grilled Chicken image -->
+                </div>
+                <div class="item-info">
+                    <h3>Grilled Chicken</h3>
+                    <p>Whole grilled chicken with mixed spices</p>
+                    <div class="item-price">48 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Grilled Chicken', 48)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="ba.jpg" alt="">
+
+                    <!-- Pasta with Chicken Breast image -->
+                </div>
+                <div class="item-info">
+                    <h3>Pasta with Chicken Breast</h3>
+                    <p>Pasta with chicken breast and vegetables</p>
+                    <div class="item-price">36 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Pasta with Chicken Breast', 36)">Add to
+                        Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="dajaj bel basal wa alemon.jpg" alt="">
+
+                    <!-- Chicken with Onion and Lemon image -->
+                </div>
+                <div class="item-info">
+                    <h3>Chicken with Onion and Lemon</h3>
+                    <p>Chicken cooked with onion, lemon and citrus</p>
+                    <div class="item-price">44 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Chicken with Onion and Lemon', 44)">Add to
+                        Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="untitled-7.jpg" alt="">
+
+                    <!-- Fatta Rice with Meat image -->
+                </div>
+                <div class="item-info">
+                    <h3>Fatta Rice with Meat</h3>
+                    <p>Rice with lamb meat, fried bread and yogurt</p>
+                    <div class="item-price">46 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Fatta Rice with Meat', 46)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="daja.jpg" alt="">
+
+                    <!-- Fatta Rice with Chicken image -->
+                </div>
+                <div class="item-info">
+                    <h3>Fatta Rice with Chicken</h3>
+                    <p>Rice with chicken, fried bread and yogurt</p>
+                    <div class="item-price">43 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Fatta Rice with Chicken', 43)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="seafood">
+                <div class="item-image">
+                    <img src="shorba.jpg" alt="">
+
+                    <!-- Fish Soup image -->
+                </div>
+                <div class="item-info">
+                    <h3>Fish Soup</h3>
+                    <p>Rich fish soup with vegetables and spices</p>
+                    <div class="item-price">32 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Fish Soup', 32)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="cv.jpg" alt="">
+
+                    <!-- Grilled Turkey Thigh image -->
+                </div>
+                <div class="item-info">
+                    <h3>Grilled Turkey Thigh</h3>
+                    <p>Grilled turkey thigh with spices</p>
+                    <div class="item-price">65 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Grilled Turkey Thigh', 65)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="mlokhea.jpg" alt="">
+
+                    <!-- Molokhia with Rabbit image -->
+                </div>
+                <div class="item-info">
+                    <h3>Molokhia with Rabbit</h3>
+                    <p>Fresh molokhia with rabbit meat</p>
+                    <div class="item-price">52 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Molokhia with Rabbit', 52)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="hawawshe.jpg" alt="">
+
+                    <!-- Hawawshi image -->
+                </div>
+                <div class="item-info">
+                    <h3>Hawawshi</h3>
+                    <p>Dough stuffed with spiced meat</p>
+                    <div class="item-price">28 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Hawawshi', 28)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="hamam mahshe.jpg" alt="">
+
+                    <!-- Stuffed Pigeon image -->
+                </div>
+                <div class="item-info">
+                    <h3>Stuffed Pigeon</h3>
+                    <p>Pigeon stuffed with rice and meat</p>
+                    <div class="item-price">58 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Stuffed Pigeon', 58)">Add to Order</button>
+                </div>
+            </div>
+
+            <!-- New Dishes -->
+            <div class="menu-item" data-category="main">
+                <div class="item-image">
+                    <img src="maftol.jpg" alt="">
+
+                    <!-- Couscous image -->
+                </div>
+                <div class="item-info">
+                    <h3>Couscous</h3>
+                    <p>Traditional North African semolina with vegetables and meat</p>
+                    <div class="item-price">40 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Couscous', 40)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="pastries">
+                <div class="item-image">
+                    <img src="dd.jpg" alt="">
+
+                    <!-- Pumpkin Sweet with Honey image -->
+                </div>
+                <div class="item-info">
+                    <h3>Pumpkin Sweet with Honey</h3>
+                    <p>Sweet pumpkin dessert with natural honey</p>
+                    <div class="item-price">22 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Pumpkin Sweet with Honey', 22)">Add to
+                        Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <div class="item-image">
+                    <img src="salatet khodar.jpg" alt="">
+
+                    <!-- Vegetable Salad image -->
+                </div>
+                <div class="item-info">
+                    <h3>Vegetable Salad</h3>
+                    <p>Fresh vegetables with olive oil and lemon dressing</p>
+                    <div class="item-price">18 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Vegetable Salad', 18)">Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="appetizers">
+                <div class="item-image">
+                    <img src="vc.jpg" alt="">
+
+                    <!-- Hummus image -->
+                </div>
+                <div class="item-info">
+                    <h3>Hummus</h3>
+                    <p>Mashed chickpeas with tahini and lemon</p>
+                    <div class="item-price">15 EGP</div>
+                    <button class="add-to-cart" onclick="addToCart('Hummus', 15)">Add to Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Order Cart</h3>
+            <button class="close-cart" onclick="closeCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Will be filled with JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: <span id="total-price">0</span> EGP</strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Complete Order via WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Free Palestine</h4>
+                <p>We offer you the finest Eastern cuisine with the best ingredients and prices</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>+20 12 79102786</p>
+                <p>rokymakson@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Working Hours</h4>
+                <p>Every day from 10 AM until 12 Midnight</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript will be added later
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
