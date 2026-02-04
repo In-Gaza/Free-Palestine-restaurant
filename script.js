@@ -1058,7 +1058,7 @@ class CheckoutModal {
         message += `*🕒 Order Time:* ${new Date().toLocaleString()}%0A%0A`;
         message += `*Thank you for choosing Free Palestine Restaurant! 🍽️🇵🇸*`;
 
-        const phoneNumber = '+201279102786';
+        const phoneNumber = '+201288197492';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
         // Simulate processing delay
@@ -1271,4 +1271,5 @@ function checkout() {
     if (window.restaurant) {
         window.restaurant.checkout();
     }
+
 }
