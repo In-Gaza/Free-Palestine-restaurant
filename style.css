@@ -7,6 +7,35 @@
 */
 
 /* CSS Reset */
+
+
+/* Cart sidebar mobile scroll fix */
+.cart-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* منطقة المنتجات فقط هي التي تعمل Scroll */
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 120px; /* مساحة للمجموع والزر */
+}
+
+/* تثبيت المجموع وزر الطلب في الأسفل */
+.cart-footer {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    z-index: 10;
+    padding: 1rem;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -991,4 +1020,5 @@ textarea:focus {
 
 strong {
     color: blue;
+
 }
